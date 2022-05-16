@@ -1,0 +1,18 @@
+<div id="box">
+    <form #registerForm="ngForm" (ngSubmit)="submitForm(registerForm)">
+        <input type="text" placeholder="Enter First_name" ngModel name="first_name" #first_name required>
+        <br><br>
+        <input type="text" placeholder="Enter Last_name" ngModel name="last_name" #last_name required>
+        <br><br>
+        <input type="email" placeholder="Enter E-mail" ngModel name="email" #email required>
+        <br><br>
+        <input type="text" placeholder="Enter Phone_number" ngModel name="phone_number" #phone_number required>
+        <br><br>
+        <input type="Password" placeholder="Enter Password" ngModel name="password" #password required>
+        <br><br>
+        <input type="password" placeholder=" Confirm Password" ngModel name="confirm  password" #confirm password required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
