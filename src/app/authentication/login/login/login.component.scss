@@ -15,3 +15,12 @@ input{
     height: 30px;
 
 }
+.side-button{
+    width: 150px;
+    height: 30px;
+    background-color: rgb(93, 93, 226);
+    color: white;
+}
+input.ng-touched.ng-invalid{
+   border: 2px solid red
+}

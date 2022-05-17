@@ -7,16 +7,22 @@ import { SharedService } from '../../shared/shared.service';
   styleUrls: ['./substraction.component.scss']
 })
 export class SubstractionComponent implements OnInit {
-  subx: any = 18;
-  suby: any = 8;
+  subx: any ;
+  suby: any ;
   subResult: any;
   item: any;
   constructor(private sharedService: SharedService) { 
-    this.subResult = this.subx - this.suby
+    
+  }
+
+  substraction(){
+    this.subResult = this.subx - this.suby;
+    this.sharedService.subsendMessage(this.subResult)
+  
   }
 
   ngOnInit(): void {
-    this.sharedService.sendMessage(this.subResult)
+    
   }
 
   

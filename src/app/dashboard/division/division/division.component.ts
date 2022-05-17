@@ -7,16 +7,18 @@ import { SharedService } from '../../shared/shared.service';
   styleUrls: ['./division.component.scss']
 })
 export class DivisionComponent implements OnInit {
-  divx: any = 12;
-  divy: any = 3;
+  divx: any ;
+  divy: any ;
   divResult: any;
   item: any;
   constructor(private sharedService: SharedService) {
-    this.divResult = this.divx / this.divy
    }
-
+  division(){
+    this.divResult = this.divx / this.divy
+    this.sharedService.divsendMessage(this.divResult)
+  }
   ngOnInit(): void {
-    this.sharedService.sendMessage(this.divResult)
+    
   }
 
  

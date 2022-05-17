@@ -7,18 +7,20 @@ import { SharedService } from '../../shared/shared.service';
   styleUrls: ['./addition.component.scss']
 })
 export class AdditionComponent implements OnInit {
-  addx: any = 12;
-  addy: any = 2;
+  addx: any ;
+  addy: any ;
   addResult: any;
   item: any;
   Result: any;
 
   constructor(private sharedService: SharedService) { 
-     this.addResult = this.addx + this.addy;
-  }
+}
+
+addition(){
+   this.addResult = this.addx + this.addy;
+   this.sharedService.addsendMessage(this.addResult)
+}
   ngOnInit(): void {
     
-     this.sharedService.sendMessage(this.addResult)
-    
-  }
+    }
  }

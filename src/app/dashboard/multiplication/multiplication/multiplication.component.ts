@@ -7,16 +7,20 @@ import { SharedService } from '../../shared/shared.service';
   styleUrls: ['./multiplication.component.scss']
 })
 export class MultiplicationComponent implements OnInit {
-  multx: any = 4;
-  multy: any = 6;
+  multx: any ;
+  multy: any ;
   multResult: any;
   item: any;
   constructor(private sharedService: SharedService) { 
+    
+  }
+  multiplication(){
     this.multResult = this.multx * this.multy
+    this.sharedService.multsendMessage(this.multResult)
   }
 
   ngOnInit(): void {
-    this.sharedService.sendMessage(this.multResult)
+    
   }
 
  

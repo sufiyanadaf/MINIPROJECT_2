@@ -1,10 +1,24 @@
 <div id="box">
     <form #registerForm="ngForm" (ngSubmit)="submitForm(registerForm)">
         <label>Enter E-mail: </label><br>
-        <input type="email" placeholder="Enter your E-mail" ngModel name="email" #email required>
-        <br><br>
+        <input
+         type="email" 
+        placeholder="Enter your E-mail" 
+        ngModel  
+        name="email" 
+        #email="ngModel" 
+        required> 
+        <p *ngIf="email.touched && !email.valid">Please Enter E-mail address</p>
+        <br>
         <label>Enter Password:</label><br>
-        <input type="Password" placeholder="Enter your Password" ngModel name="password" #password required>
+        <input 
+        type="Password" 
+        placeholder="Enter your Password" 
+        ngModel 
+        name="password" 
+        #password = "ngModel"
+        required>
+        <p *ngIf="password.touched && !password.valid">Please Enter password address</p>
         <br><br>
        <button type="submit">Submit</button>
      </form>
